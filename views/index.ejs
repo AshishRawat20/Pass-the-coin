@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Game</title>
+</head>
+<body>
+    <h1>Pass The C<img src="coin.png" />in</h1>
+    <div class="parent">
+        <div class="gameBox">
+            <div class="level 0" id="0">
+                <span>level 0</span>
+                <div class="box" id="00"></div>
+            </div>
+            <div class="level 1" id="1">
+                <span>level 1</span>
+                <div class="box" id="10"></div>
+                <div class="box" id="11"></div>
+            </div>
+            <div class="level 2" id="2">
+                <span>level 2</span>
+                <div class="box" id="20"></div>
+                <div class="box" id="21"></div>
+                <div class="box" id="22"></div>
+            </div>
+            <div class="level 3" id="3">
+                <span>level 3</span>
+                <div class="box" id="30"></div>
+                <div class="box" id="31"></div>
+                <div class="box" id="32"></div>
+                <div class="box" id="33"></div>
+            </div>    
+        </div>
+        <div class="details">
+            <div class="comp">
+                <h3>Computer's Last Turn</h3>
+                <p>
+                    <span class="bold under">FROM</span>
+                    <span class="bold right under">TO</span>
+                </p>
+                <p>
+                    <span id="computer_from">-</span>
+                    <span class="right" id="computer_to">-</span>
+                </p>
+            </div>
+            <div class="p1">
+                <h3>Player's Last Turn</h3>
+                <p>
+                    <span class="bold under">FROM</span>
+                    <span class="bold right under">TO</span>
+                </p>
+                <p>
+                    <span id="player_from">-</span>
+                    <span class="right" id="player_to">-</span>
+                </p>
+            </div>
+            <div class="go" id="restart">
+                <button>Restart</button>
+            </div>
+            <div id="win">
+                <h2>Computer Wins !</h2>
+            </div>
+        </div>
+    </div>
+    <a class="rules" href="#rules">Rules</a>
+    <div class="rules" id="rules">
+        <ul>
+            <li>Each box will have 1 or 2 coins. </li>
+            <li>The player will choose the 1st box which cannot be box at level 0 or any box with 0 coins, then the player will choose a 2nd box which should have a lower level than 1st chosen box, example he can choose box at level 2 then box at level 0.</li>
+            <li>The game will be in turns that is the first move is of player then computer, and so on. </li>
+            <li>The game ends when a person cannot make a move and a person cannot make a move when all boxes have 0 coins except box at level 0. The one who cannot make a move loses, So, the one who makes the last move wins.</li>
+        </ul>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
